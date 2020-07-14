@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <p id="sample1"></p>
+    <p id="sample2"></p>
+    <p id="sample3"></p>
+    <p id="sample4"></p>
+
+    <script>
+        var today = new Date();
+        var dd = today.getDate();
+
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        today = mm + '-' + dd + '-' + yyyy;
+        today2 = mm + '/' + dd + '/' + yyyy;
+        today3 = dd + '-' + mm + '-' + yyyy;
+        today4 = dd + '/' + mm + '/' + yyyy;
+        document.getElementById('sample1').innerHTML = today;
+        document.getElementById('sample2').innerHTML = today2;
+        document.getElementById('sample3').innerHTML = today3;
+        document.getElementById('sample4').innerHTML = today4;
+    </script>
+</body>
+
+</html>
